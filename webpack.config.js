@@ -9,4 +9,14 @@ module.exports = {
     plugins: [
         new WriteFilePlugin()
     ],
+    module: {
+        rules: [
+            {
+                test: /\.xml$/,
+                use: [
+                    'xml-loader'
+                ]
+            }
+        ]
+    }
 };
